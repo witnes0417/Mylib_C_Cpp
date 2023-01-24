@@ -294,15 +294,15 @@ int main(int argc, char* argv[]){
 	/* enum A {apple, pear, orange}; */
 	/* printf("%d",); */
 
-	uint64_t a = 1111111111111111111 , b = 11111111111111111;
-	char *c;
-	__int128 d;
-
-	d = mult_Karatsuba(a,b,64);
-	c = (char *)&d;
-	for(int i =0; i<16;i++){
-		printf("%02x", *(c+15-i)&0xff);
-	}	
+	/* uint64_t a = 1111111111111111111 , b = 11111111111111111; */
+	/* char *c; */
+	/* __int128 d; */
+    /*  */
+	/* d = mult_Karatsuba(a,b,64); */
+	/* c = (char *)&d; */
+	/* for(int i =0; i<16;i++){ */
+	/* 	printf("%02x", *(c+15-i)&0xff); */
+	/* }	 */
 
 
 	/* char a[] = "aaabbbaacccaaaa"; */
