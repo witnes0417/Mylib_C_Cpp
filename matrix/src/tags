@@ -40,7 +40,7 @@
 !_TAG_PARSER_VERSION!C	0.0	/current.age/
 !_TAG_PARSER_VERSION!C++	0.0	/current.age/
 !_TAG_PATTERN_LENGTH_LIMIT	96	/0 for no limit/
-!_TAG_PROC_CWD	/home/rangol/work/Practice_C_CPP/Mylib_C_Cpp/matrix/src/	//
+!_TAG_PROC_CWD	/home/rangol/work/Practice_C_CPP/Mylib_C_Cpp/matrix/	//
 !_TAG_PROGRAM_AUTHOR	Universal Ctags Team	//
 !_TAG_PROGRAM_NAME	Universal Ctags	/Derived from Exuberant Ctags/
 !_TAG_PROGRAM_URL	https://ctags.io/	/official site/
@@ -51,16 +51,21 @@
 !_TAG_ROLE_DESCRIPTION!C++!header	local	/local header/
 !_TAG_ROLE_DESCRIPTION!C++!header	system	/system header/
 !_TAG_ROLE_DESCRIPTION!C++!macro	undef	/undefined/
-MAT_SIZE_EQUAL	matrix.h	/^#define MAT_SIZE_EQUAL(/;"	d
-Matrix	matrix.h	/^typedef struct Matrix{$/;"	s
-Matrix	matrix.h	/^} Matrix;$/;"	t	typeref:struct:Matrix
-_MATRIX_H	matrix.h	/^#define _MATRIX_H$/;"	d
-addMat	matrix.c	/^bool addMat(const Matrix *m1, const Matrix *m2, Matrix *out){$/;"	f	typeref:typename:bool
-col	matrix.h	/^	size_t col;$/;"	m	struct:Matrix	typeref:typename:size_t
-createMat	matrix.c	/^Matrix * createMat(size_t col, size_t row){$/;"	f	typeref:typename:Matrix *
-data	matrix.h	/^	float *data;$/;"	m	struct:Matrix	typeref:typename:float *
-delMat	matrix.c	/^bool delMat(Matrix *p)$/;"	f	typeref:typename:bool
-initMat	matrix.c	/^bool initMat(Matrix *m1, Matrix *m2){$/;"	f	typeref:typename:bool
-main	main.c	/^int main(int argc, char* argv[]){$/;"	f	typeref:typename:int
-printMat	matrix.c	/^bool printMat( const Matrix *p )$/;"	f	typeref:typename:bool
-row	matrix.h	/^	size_t row;$/;"	m	struct:Matrix	typeref:typename:size_t
+MADD	./src/matrix.h	/^#define MADD(/;"	d
+MAT_MULTABLE	./src/matrix.h	/^#define MAT_MULTABLE(/;"	d
+MAT_SIZE_EQUAL	./src/matrix.h	/^#define MAT_SIZE_EQUAL(/;"	d
+MAT_TEST	./src/matrix.h	/^#define MAT_TEST(/;"	d
+Matrix	./src/matrix.h	/^typedef struct Matrix{$/;"	s
+Matrix	./src/matrix.h	/^} Matrix;$/;"	t	typeref:struct:Matrix
+_MATRIX_H	./src/matrix.h	/^#define _MATRIX_H$/;"	d
+addMat	./src/matrix.c	/^bool addMat(const Matrix *m1, const Matrix *m2, Matrix *out){$/;"	f	typeref:typename:bool
+col	./src/matrix.h	/^	size_t col;$/;"	m	struct:Matrix	typeref:typename:size_t
+copyMat	./src/matrix.c	/^bool copyMat(Matrix *m1, Matrix *m2){$/;"	f	typeref:typename:bool
+createMat	./src/matrix.c	/^Matrix * createMat(size_t row, size_t col){$/;"	f	typeref:typename:Matrix *
+data	./src/matrix.h	/^	float *data;$/;"	m	struct:Matrix	typeref:typename:float *
+delMat	./src/matrix.c	/^bool delMat(Matrix *p)$/;"	f	typeref:typename:bool
+initMat	./src/matrix.c	/^bool initMat(Matrix *m1, size_t arrLen, const float *arr){$/;"	f	typeref:typename:bool
+main	./src/main.c	/^int main(int argc, char* argv[]){$/;"	f	typeref:typename:int
+mulMat	./src/matrix.c	/^bool mulMat(const Matrix *m1, const Matrix *m2, Matrix *out){$/;"	f	typeref:typename:bool
+printMat	./src/matrix.c	/^bool printMat( const Matrix *p )$/;"	f	typeref:typename:bool
+row	./src/matrix.h	/^	size_t row;$/;"	m	struct:Matrix	typeref:typename:size_t

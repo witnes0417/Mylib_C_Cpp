@@ -14,6 +14,9 @@ if( m1->col !=  m2->row || out->row != m1->row || out->col != m2->col)\
 	fprintf(stderr, "in %s : Given mat are not multable\n",__FUNCTION__);\
 	return false;\
 }
+#define MADD(data1,data2,dlen1,dlen2, out) \
+
+
 
 #include <stdbool.h>
 #include <stddef.h>
@@ -31,5 +34,6 @@ bool copyMat(Matrix *m1, Matrix *m2);
 bool addMat(const Matrix *m1, const Matrix *m2, Matrix *out);
 bool printMat(const Matrix *p);
 bool mulMat(const Matrix *m1, const Matrix *m2, Matrix *out);
+bool mAdd(const float *data1, const float *data2,float *out);
 
 #endif

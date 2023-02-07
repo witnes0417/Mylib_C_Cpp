@@ -3,7 +3,7 @@
 #include <string.h>
 #include "matrix.h"
 
-Matrix * createMat(size_t col, size_t row){
+Matrix * createMat(size_t row, size_t col){
 	Matrix *p = NULL;
 
 	if( col == 0 || row ==0)
@@ -42,6 +42,7 @@ bool delMat(Matrix *p)
 
 
 }
+
 bool initMat(Matrix *m1, size_t arrLen, const float *arr){
 	
 	size_t len = m1->col * m1->row;
@@ -91,21 +92,34 @@ bool addMat(const Matrix *m1, const Matrix *m2, Matrix *out){
 	return true;
 
 }
-
+ 
 bool mulMat(const Matrix *m1, const Matrix *m2, Matrix *out){
 
 	MAT_TEST(m1)
 	MAT_TEST(m2)
 	MAT_TEST(out)	
+	MAT_MULTABLE(m1,m2,out)
 
-	if( m1->col !=  m2->row || out->row != m1->row || out->col != m2->col)
-	{
-		fprintf(stderr, "in %s : Given mat are not multable\n",__FUNCTION__);
-		return false;
-	}
 	//out = m1 .* m2
-	
+	//time complexity n^3
+	size_t len = m1->row * m2->col;
+	const float *p1 = m1->data;
+	const float *p2 = m2->data;
+	const float *col = p2;
+	const float *row = p1;
+	float *p3 = out->data;
 
+	for(size_t i = 0; i < len; i++)
+	{
+		p1 = row + (i / m1->col) * m1->col; p2 = (col + (i % m2->col) );
+		for(size_t j=0; j < m1->col; j++)
+		{
+			*p3 += *(p1+j) * *(p2 + j*m2->col);
+		}
+		p3++;
+	}
+
+	return true;
 
 }
 
